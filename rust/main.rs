@@ -20,9 +20,9 @@ fn main(){
     fn calc_ref_len(s:&str) ->usize{
          s.len()
       }
-      let mut s = "helloaloha".to_string();
+      let mut s = "hello".to_string();
       fn change_string(s: &mut String){
-          s.push_str("  ...alohaworld");
+          s.push_str("101");
       }
         change_string(&mut s);
         println!("{}", s);
