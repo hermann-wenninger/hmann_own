@@ -26,4 +26,7 @@ fn main(){
       }
         change_string(&mut s);
         println!("{}", s);
+        let word: String = String::from("abra kadabra pro labra");
+        let a_word = &word[0..5];
+        println!("{}", a_word);
 }

@@ -10,13 +10,13 @@ nav{
   z-index: 99;
   width: 100%;
   
-  background: #e5e7e9;
+  background: #e5e7e9c8;
 }
 nav .wrapper{
   position: relative;
   max-width: 1300px;
   padding: 0px 30px;
-  height: 70px;
+  height: 50px;
   line-height: 70px;
   margin: auto;
   display: flex;
@@ -25,8 +25,8 @@ nav .wrapper{
 }
 .wrapper .logo a{
   color: #060606;
-  font-size: 30px;
-  font-weight: 600;
+  font-size: 1.1em;
+  font-weight: 500;
   text-decoration: none;
 }
 .wrapper .nav-links{
@@ -63,7 +63,7 @@ nav .wrapper{
 .nav-links li:hover .drop-menu,
 .nav-links li:hover .mega-box{
   transition: all 0.3s ease;
-  top: 70px;
+  top: 50px;
   opacity: 1;
   visibility: visible;
 }
@@ -79,7 +79,7 @@ nav .wrapper{
   left: 0;
   width: 100%;
   padding: 0 30px;
-  top: 85px;
+  top: 50px;
   opacity: 0;
   visibility: hidden;
 }
@@ -258,16 +258,45 @@ nav input{
   display: none;
 }
 
-.body-text{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;
-  text-align: center;
-  padding: 0 30px;
+.main{
+    position: relative;
+    top: 0;
+    left: 0;
+    background-color: aqua;
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
 }
-.body-text div{
-  font-size: 45px;
-  font-weight: 600;
+.second{
+    position: relative;
+    top: 0;
+    left: 0;
+    background-color: rgb(95, 227, 92);
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .third{
+    position: relative;
+    background-color: rgb(233, 238, 233);
+    width: 30vw;
+    height: 90vh;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+.main div{
+    font-size: 1.5em;
+    font-weight: 500;
 }
