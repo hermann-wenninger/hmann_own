@@ -1,8 +1,9 @@
 fn main(){
     use std::thread;
+    let nok = vec![1, 2, 3, 4, 5, 6, 7, 8];
 
         println!("Hello from the main thread ....... 1.");
-       let t1 = thread::spawn(fd);
+       let t1 = thread::spawn(move ||  {  for n in &nok {println!("{n}");}return nok;});
         println!("Hello from the main thread ........2.");
       let t2 = thread::spawn(fd);
         println!("Hello from the main thread ........3.");
