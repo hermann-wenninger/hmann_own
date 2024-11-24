@@ -1,38 +1,32 @@
 fn main(){
-    struct User<'alpha>{
-        name:& 'alpha str,
-        age: u8,
-        email:& 'alpha str, 
+    use std::thread;
 
+        println!("Hello from the main thread ....... 1.");
+        thread::spawn(fd);
+        println!("Hello from the main thread ........2.");
+        thread::spawn(fd);
+        println!("Hello from the main thread ........3.");
+        thread::spawn(fd);
+        println!("Hello from the main thread ........4.");
+        thread::spawn(fd);
+        println!("Hello from the main thread ........5.");
+        thread::spawn(fd);
+        println!("Hello from the main thread ........6.");
+        thread::spawn(fd);
+        println!("Hello from the main thread ........7.");
+        thread::spawn(fd);
+        println!("Hello from the main thread ........8.");
+        thread::spawn(fd);
+        
+    
+        println!("Hello from the main thread ........end.");
+    
+    
+    fn fd() {
+        println!("Hello from another thread!");
+    
+        let id = thread::current().id();
+        println!("This is my thread id: {id:?}");
     }
- struct Tweet <'alpha>{
-    user: & 'alpha  User<'alpha>,
-    content : & 'alpha str,
- }
- impl <'alpha> User <'alpha>{
-    fn newUsr(name: & 'alpha str, age: u8, email: & 'alpha str) -> User <'alpha>{
-        User{
-            name,
-            age,
-            email,
-        }
-    }
- }
-impl <'alpha> Tweet <'alpha>{
-    fn new(user: & 'alpha User<'alpha>, content: & 'alpha str) -> Tweet <'alpha>{
-        Tweet{
-            user,
-            content,
-        }
-    }
-}
-    let user = User{
-        name: "John",
-        age: 23,
-        email: "
-}
-
-
-
 
     }
