@@ -1,13 +1,14 @@
 fn main(){
     use std::thread;
     let nok = vec![1, 2, 3, 4, 5, 6, 7, 8];
-
+    let nok2 = nok.clone();
+    let nok3 = nok.clone();
         println!("Hello from the main thread ....... 1.");
        let t1 = thread::spawn(move ||  {  for n in &nok {println!("{n}");}return nok;});
         println!("Hello from the main thread ........2.");
-      let t2 = thread::spawn(fd);
+      let t2 = thread::spawn(move ||  {  for n in &nok2 {println!("{n}");}return nok2;});
         println!("Hello from the main thread ........3.");
-      let t3 =  thread::spawn(fd);
+      let t3 =  thread::scope(|nok3|nok3.spawn(|| {  for n in &nok3.iter() {println!("{n}");}}));
         println!("Hello from the main thread ........4.");
       let t4 =  thread::spawn(fd);
         println!("Hello from the main thread ........5.");
