@@ -12,6 +12,9 @@ nav{
   
   background: #e5e7e9c8;
 }
+h1{
+  font-size:1.1em;
+}
 nav .wrapper{
   position: relative;
   max-width: 1300px;
@@ -273,30 +276,44 @@ nav input{
     flex-direction: column;
 }
 .second{
-    position: relative;
-    top: 0;
-    left: 0;
-    background-color: rgb(95, 227, 92);
-    width: 100vw;
-    height: 100vh;
-    text-align: center;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-evenly;
-  }
+  position: relative;
+  top: 0;
+  left: 0;
+  background-color: rgb(213 144 189);
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
   .third{
     position: relative;
     background-color: rgb(233, 238, 233);
-    width: 30vw;
+    width: 25vw;
     height: 90vh;
     text-align: center;
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
-  }
+    padding: 1em;
+}
+.fourth {
+  height: 100vh;
+  background-color: cornflowerblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-direction: column;
+  text-align: center;
+}
 .main div{
     font-size: 1.5em;
     font-weight: 500;
+}
+.subtitle{
+  width: 90vw;;
 }

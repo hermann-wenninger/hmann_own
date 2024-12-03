@@ -1,5 +1,13 @@
 use juniper::{EmptyMutation, RootNode};
 
+
+
+pub type Schema = RootNode<'static, QueryRoot, EmptyMutation<()>>;
+
+    pub fn create_schema() -> Schema {
+      Schema::new(QueryRoot {}, EmptyMutation::new())
+    }
+
     struct Member {
       id: i32,
       name: String,
@@ -21,15 +29,8 @@ use juniper::{EmptyMutation, RootNode};
     #[juniper::object]
     impl QueryRoot {
       fn members() -> Vec<Member> {
-        vec![
-          Member {
-            id: 1,
-            name: "Link".to_owned(),
-          },
-          Member {
-            id: 2,
-            name: "Mario".to_owned(),
-          }
+        vec![ Member {id: 1,name: "Linke".to_owned(),},
+              Member {id: 2,name: "Mario".to_owned(),}
         ]
       }
     }
