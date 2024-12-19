@@ -1,4 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+@font-face {
+  font-family: 'MyWebFont';
+  src: url('webfont.eot'); /* IE9 Compat Modes */
+  src: url('webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('./font/webfonts/fa-v4compatibility.woff2') format('woff'), /* Modern Browsers */
+       url('./font/webfonts/fa-regular-400.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
 *{
   margin: 0;
   padding: 0;
@@ -13,7 +22,10 @@ nav{
   background: #e5e7e9c8;
 }
 h1{
-  font-size:1.1em;
+  font-size:2.1em;
+}
+h2{
+  font-size:1.2em;
 }
 nav .wrapper{
   position: relative;
@@ -316,4 +328,14 @@ nav input{
 }
 .subtitle{
   width: 90vw;;
+}
+section.ablauf {
+  height: 100vh;
+  width: 100vw;
+  background-color: burlywood;
+  display: flex
+;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
