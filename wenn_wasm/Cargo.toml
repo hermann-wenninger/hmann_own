@@ -1,8 +1,12 @@
 [package]
-name = "wasm-game-of-life"
+name = "wenn_wasm"
 version = "0.1.0"
 authors = ["hermann wenninger <info@wennhmann.de>"]
 edition = "2018"
+
+[[bin]]
+
+path = "src/lib.rs"
 
 [lib]
 crate-type = ["cdylib", "rlib"]
@@ -25,3 +29,5 @@ wasm-bindgen-test = "0.3.34"
 [profile.release]
 # Tell `rustc` to optimize for small code size.
 opt-level = "s"
+
+edition = "2024"
